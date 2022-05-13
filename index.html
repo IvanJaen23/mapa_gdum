@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GDUMA Obras Publicas</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+</head>
+<body>
+	<h1>Obras Públicas de la Municipalidad de Lima</h1>
+	<p>Obras publicas ejecutadas en los distritos de Cercado de Lima, Miraflores, El Agustino y Barranco</p>
+
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin="">
+	</script>
+	<div id="map" style="width: 1350px; height: 440px"></div>
+	<script>
+	var map = L.map('map',{ 
+			center: [-12.052680, -77.048950],
+			zoom: 12});
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+
+	var myMarker1 =L.marker([-12.1213087,-77.0452172])
+	myMarker1.bindPopup("<h1>Playa Tres Picos</h1><p>Mejoramiento del Malecón de la Costa Verde: Playa Tres Picos</p><ul><li><strong>Monto:</strong> 1 millón</li><li><strong>Distrito:</strong> Miraflores</li><li><strong>Beneficiados:</strong> 467,645 personas</li></ul>")
+
+	//Playa Barranquito
+	var myMarker2 =L.marker([-12.1432627,-77.0266925])
+	myMarker2.bindPopup("<h1>Playa Barranquito</h1><p>Mejoramiento del Malecón de la Costa Verde: Playa Barranquito</p><ul><li><strong>Monto:</strong> 1 millón</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 467,645 personas</li></ul>")
+
+	//Parque Dofrio G. Barrón
+	var myMarker3 =L.marker([-12.05516,-77.06725],{title:"MyPoint",alt:"The Big I",draggable:false}).addTo(map)
+	myMarker3.bindPopup("<h1>Parque Dófrio G. Barrón</h1><p>Recuperación Parque Dófrio G. Barrón</p><ul><li><strong>Monto:</strong> 995 mil</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 1,179 personas</li></ul>")
+
+	//Parque Virgen de Fátima
+	var myMarker4 =L.marker([-12.0669663,-77.0704741])
+	myMarker4.bindPopup("<h1>Parque Virgen de Fátima</h1><p>Recuperación del Parque Trabajadores Municipales</p><ul><li><strong>Monto:</strong> 895 mil  </li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 1,115 personas</li></ul>")
+
+	//Parque Trabajadores Municipales
+	var myMarker4 =L.marker([-12.0549036,-77.0611377])
+	myMarker4.bindPopup("<h1>Parque Trabajadores Municipales</h1><p>Recuperación del Parque Trabajadores Municipales</p><ul><li><strong>Monto:</strong> 970 mil </li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 1,700 personas personas</li></ul>")
+
+	//Parque Santa Emma
+	var myMarker5 =L.marker([-12.0662741,-77.0748505])
+	myMarker5.bindPopup("<h1>Parque Seremsa</h1><p>Recuperación del Parque Trabajadores Municipales</p><ul><li><strong>Monto:</strong> 1.7 millones</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 1,950 personas</li></ul>")
+
+	//Parque Gonzáles Olaechea
+	var myMarker5 =L.marker([-12.0552747,-77.0723935])
+	myMarker5.bindPopup("<h1>Parque Gonzáles Olaechea</h1><p>Recuperación del Parque Gonzáles Olaechea</p><ul><li><strong>Monto:</strong> 4,5 millones</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 5,550 personas</li></ul>")
+
+	//Parque inclusivo Arias Schreiber
+	var myMarker6 =L.marker([-12.0537415,-77.0751741])
+	myMarker6.bindPopup("<h1>Parque inclusivo Arias Schreiber</h1><p>Recuperación del Parque Trabajadores Municipales</p><ul><li><strong>Monto:</strong> 4 millones</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 4,300 personas</li></ul>")
+
+	//Peatonalizacion Jiron Huanta
+	var myMarker7 =L.marker([-12.0549036,-77.0611377])
+	myMarker7.bindPopup("<h1>Peatonalización</h1><p>Mejoramiento de la transitabilidad <br>peatonal Jr. Huanta</p><ul><li><strong>Monto:</strong> 1,8 millones</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 7,328 personas</li></ul>")
+
+	var myMarker8 =L.marker([-12.0562737,-777.0769875])
+	myMarker8.bindPopup("<h1>Parque Felipe Sassone</h1><p>Recuperación del Parque Felipe Sassone </p><ul><li><strong>Monto:</strong> 2.5 millones</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 2,000 personas</li></ul>")
+
+	var myMarker9 =L.marker([-12.0634616,-77.0768959])
+	myMarker9.bindPopup("<h1>Parque Carlos Lisson</h1><p>Recuperación del Parque Carlos Lisson</p><ul><li><strong>Monto:</strong> 2.8 millones</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 3 mil personas</li></ul>")
+
+	var myMarker10 =L.marker([-12.0481066,-77.0045602])
+	myMarker10.bindPopup("<h1>Parque Ayar Manco</h1><p>Implementación de los servicios en espacios <br> públicos Parque Ayar Manco</p><ul><li><strong>Monto:</strong> 440 mil</li><li><strong>Distrito:</strong> El Agustino</li><li><strong>Beneficiados:</strong> 20 mil personas</li></ul>")
+
+	var myMarker11 =L.marker([-12.0445918,-77.0016101])
+	myMarker11.bindPopup("<h1>Parque Navarra</h1><p>Remodelación del Parque Navarra</p><ul><li><strong>Monto:</strong> 1.3 millones</li><li><strong>Distrito:</strong> El Agustino</li><li><strong>Beneficiados:</strong> 20 mil personas</li></ul>")
+
+	var myMarker11 =L.marker([-12.0445918,-77.0016101])
+	myMarker11.bindPopup("<h1>Parque Navarra</h1><p>Remodelación del Parque Navarra</p><ul><li><strong>Monto:</strong> 1.3 millones</li><li><strong>Distrito:</strong> El Agustino</li><li><strong>Beneficiados:</strong> 20 mil personas</li></ul>")
+
+	var myMarker12 =L.marker([-12.0445918,-77.0016101])
+	myMarker12.bindPopup("<h1>Parque Navarra</h1><p>Remodelación del Parque Navarra</p><ul><li><strong>Monto:</strong> 1.3 millones</li><li><strong>Distrito:</strong> El Agustino</li><li><strong>Beneficiados:</strong> 20 mil personas</li></ul>")
+
+	var myMarker13 =L.marker([-12.0621913,-77.0721519])
+	myMarker13.bindPopup("<h1>Parque Control Henrriot</h1><p>Implementación de los servicios recreativos <br> del Parque Control Henrriot</p><ul><li><strong>Monto:</strong> 2 millones</li><li><strong>Distrito:</strong> Cercado de Lima</li><li><strong>Beneficiados:</strong> 41 mil personas</li></ul>")
+	L.layerGroup([
+					myMarker1,
+					myMarker2,
+					myMarker3,
+					myMarker4,
+					myMarker5,
+					myMarker6,
+					myMarker7,
+					myMarker8,
+					myMarker9,
+					myMarker10,
+					myMarker11,
+					myMarker12,
+					myMarker13
+					]).addTo(map)
+	
+
+	</script>
+</body>
+</html>
